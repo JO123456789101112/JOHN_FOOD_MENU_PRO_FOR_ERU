@@ -268,25 +268,25 @@
           <ul class="social-list">
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
+              <a href="https://facebook.com" class="social-link">
+                <ion-icon name="logo-facebook"><a href="https://facebook.com"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://twitter.com" class="social-link">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://instagram.com" class="social-link">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://pinterest" class="social-link">
                 <ion-icon name="logo-pinterest"></ion-icon>
               </a>
             </li>
@@ -365,7 +365,41 @@
 
           <textarea name="message" required placeholder="Message" aria-label="Message" class="input-field"></textarea>
 
-          <button type="submit" class="btn">Book a Table</button>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>ERU Food Court</title>
+              <style>
+                  .btn {
+                      padding: 10px 20px;
+                      font-size: 16px;
+                      cursor: pointer;
+                  }
+                  #message {
+                      margin-top: 20px;
+                      font-size: 18px;
+                      color: green;
+                  }
+              </style>
+          </head>
+          <body>
+              <button onclick="booked()" type="submit" class="btn">Book a Table</button>
+              <div id="message"></div>
+          
+              <script>
+                  function booked() {
+                      // Generate a random number between 1 and 10
+                      const randomValue = Math.floor(Math.random() * 5) + 1;
+                      
+                      // Display the message with the random value
+                      document.getElementById('message').innerText = `Your table has been booked successfully! Your booking reference number is ${randomValue}.`;
+                  }
+              </script>
+          </body>
+          </html>
+          
 
         </form>
 
